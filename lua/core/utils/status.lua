@@ -237,7 +237,7 @@ end
 -- @usage local heirline_component = { provider = astronvim.status.provider.filename() }
 -- @see astronvim.status.utils.stylize
 function astronvim.status.provider.filename(opts)
-  opts = astronvim.default_tbl(opts, { fname = function(nr) return vim.api.nvim_buf_get_name(nr) end, modify = ":t" })
+  opts = astronvim.default_tbl(opts, { fname = function(nr) return vim.api.nvim_buf_get_name(nr) end, modify = ":h" })
   return function(self)
     local filename = vim.fn.fnamemodify(opts.fname(self and self.bufnr or 0), opts.modify)
     return astronvim.status.utils.stylize((filename == "" and "[No Name]" or filename), opts)

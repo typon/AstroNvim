@@ -124,7 +124,7 @@ if is_available "aerial.nvim" then maps.n["<leader>lS"] = { "<cmd>AerialToggle<c
 
 -- Telescope
 if is_available "telescope.nvim" then
-  maps.n["<leader>fw"] = { function() require("telescope.builtin").live_grep() end, desc = "Search words" }
+  maps.n["<leader>fw"] = { function() require("telescope").extensions.live_grep_args.live_grep_args() end, desc = "Search words" }
   maps.n["<leader>fW"] = {
     function()
       require("telescope.builtin").live_grep {

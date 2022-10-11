@@ -172,12 +172,12 @@ local astro_plugins = {
     config = function() require "configs.null-ls" end,
   },
 
-  -- Fuzzy finder
-  ["nvim-telescope/telescope.nvim"] = {
-    cmd = "Telescope",
-    module = "telescope",
-    config = function() require "configs.telescope" end,
-  },
+  -- -- Fuzzy finder
+  -- ["nvim-telescope/telescope.nvim"] = {
+  --   cmd = "Telescope",
+  --   module = "telescope",
+  --   config = function() require "configs.telescope" end,
+  -- },
 
   -- Fuzzy finder syntax support
   [("nvim-telescope/telescope-%s-native.nvim"):format(vim.fn.has "win32" == 1 and "fzy" or "fzf")] = {

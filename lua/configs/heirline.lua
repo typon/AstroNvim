@@ -63,7 +63,7 @@ local heirline_opts = astronvim.user_plugin_opts("plugins.heirline", {
     astronvim.status.component.mode(),
     astronvim.status.component.git_branch(),
     astronvim.status.component.file_info(
-      astronvim.is_available "bufferline.nvim" and { filetype = {}, filename = false, file_modified = false } or nil
+      astronvim.is_available "bufferline.nvim" and { filetype = false, filename = {modify=":."}, file_modified = false } or nil
     ),
     astronvim.status.component.git_diff(),
     astronvim.status.component.diagnostics(),
